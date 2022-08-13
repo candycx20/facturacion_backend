@@ -15,7 +15,7 @@ app.use(express.json({limit:"50mb"}));
 app.use(express.urlencoded({limit:"50mb" , extended: false }));  
 
 
-require("./routes/app")(app);
+require("./routes/index")(app);
 
 app.use(express.static('./public'));
 
