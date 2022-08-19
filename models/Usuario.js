@@ -25,10 +25,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    /* id_tipo_usuario: {
+    id_tipo_usuario: {
       type: DataTypes.INTEGER,
       allowNull: false
-    } */
+    } 
   }, {
     sequelize,
     modelName: 'usuarios',
