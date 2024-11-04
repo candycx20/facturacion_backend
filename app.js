@@ -23,7 +23,7 @@ app.get('*', (req, res) => res.status(200).send({
      message: 'Index.',
 }));
 
-const port = parseInt(process.env.PORT, 10) || 3000;
+const port = parseInt(3000, 10) || 3000;
 app.set('port', port);
 const server = http.createServer(app);
 server.listen(port);
