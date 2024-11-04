@@ -2,24 +2,25 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('usuarios', {
+
+    await queryInterface.createTable('facturas', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      user: {
-        type: Sequelize.STRING,
+      fecha: {
+        type: Sequelize.DATE,
         allowNull: false
       },
-      password: {
-        type: Sequelize.STRING,
+      total: {
+        type: Sequelize.INTEGER,
         allowNull: false
       },
       estado: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,
@@ -29,18 +30,18 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-/*       id_tipo_usuario: {
+      id_cliente: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
-            model: 'tipo_usuarios',
+            model: 'clientes',
             key: 'id'
         }
-      }, */
+      }, 
     });
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('usuarios');
+    await queryInterface.dropTable('facturas');
   }
 };

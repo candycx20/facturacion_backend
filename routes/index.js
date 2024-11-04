@@ -1,8 +1,17 @@
 const { Router } = require('express');
 const router = Router();
 
-const UsuarioController = require('../controllers/UsuarioController');
+const emisorRoute = require('./routesCrud/emisorRoute');
+const facturaRoute = require('./routesCrud/facturaRoute');
+const receptorRoute = require('./routesCrud/receptorRoute');
+const itemRoute = require('./routesCrud/itemRoute');
 
 module.exports = (app) => {
-     router.get('/usuario/get', UsuarioController.get);
+
+     app.use('/api/emisores', emisorRoute);
+     app.use('/api/facturas', facturaRoute);
+     app.use('/api/receptores', receptorRoute);
+     app.use('/api/items', itemRoute);
+
+     app.use('/', router);
 }
