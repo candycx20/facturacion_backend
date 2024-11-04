@@ -1,26 +1,28 @@
 {
     "development": {
-      "username": "root",
-      "password": "",
+      "username": "admin",
+      "password": "Q3HH7DQ6",
       "database": "facturacion",
-      "host": "127.0.0.1",
+      "host": "database-1.c9s08qs0yb7v.us-east-2.rds.amazonaws.com",
       "dialect": "mysql",
-      "port": 3307,
+      "port": 3308,
       "operatorAliases": false
     },
     "test": {
-      "username": "root",
-      "password": "",
-      "database": "barberia",
-      "host": "127.0.0.1",
-      "dialect": "mysql"
+      "username": "admin",
+      "password": "Q3HH7DQ6",
+      "database": "facturacion",
+      "host": "database-1.c9s08qs0yb7v.us-east-2.rds.amazonaws.com",
+      "dialect": "mysql",
+      "port": 3308
     },
     "production": {
-      "username": "root",
-      "password": "",
-      "database": "barberia",
-      "host": "127.0.0.1",
-      "dialect": "mysql"
+      "username": "admin",
+      "password": "Q3HH7DQ6",
+      "database": "facturacion",
+      "host": "database-1.c9s08qs0yb7v.us-east-2.rds.amazonaws.com",
+      "dialect": "mysql",
+      "port": 3308
     }
   }
   
