@@ -22,10 +22,11 @@ module.exports = {
                 return res.status(404).send({ error: "Emisor no encontrado" });
             }
     
-            const { nombre, nit: nit_Emisor, direccion } = emisor.dataValues;
+            const { nombre, nit: nit_Emisor, direccion, id } = emisor.dataValues;
     
             const xml = xmlbuilder.create('emisores')
                 .ele('Emisor', { nit: nit_Emisor })
+                    .ele('id', id).up()
                     .ele('nombre', nombre).up()
                     .ele('direccion', direccion).up()
                 .end({ pretty: true });

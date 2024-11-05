@@ -64,8 +64,10 @@ module.exports = {
             const establecimiento = receptor.establecimiento;
             const establecimientoNombre = establecimiento ? establecimiento.nombre : 'No disponible';
             const establecimientoDireccion = establecimiento ? establecimiento.direccion : 'No disponible';
+            const { id } = nuevaFactura;
 
             const xml = xmlbuilder.create('factura')
+                .ele('id', id).up()
                 .ele('no_autorizacion', no_autorizacion).up()
                 .ele('serie', serie).up()
                 .ele('no_acceso', no_acceso).up()

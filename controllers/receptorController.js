@@ -33,7 +33,7 @@ module.exports = {
                 return res.status(404).send({ error: "Receptor no encontrado" });
             }
     
-            const { nombre, nit: nit_Receptor, direccion } = receptor.dataValues;
+            const { nombre, nit: nit_Receptor, direccion, id } = receptor.dataValues;
             const establecimiento = receptor.establecimiento; // Obtener el establecimiento asociado
 
             // Verificar si hay un establecimiento asociado
@@ -43,6 +43,7 @@ module.exports = {
             // Crear la respuesta en formato XML
             const xml = xmlbuilder.create('receptores')
                 .ele('Receptor', { nit: nit_Receptor })
+                    .ele('id', id).up() 
                     .ele('nombre', nombre).up()
                     .ele('direccion', direccion).up()
                     .ele('Establecimiento')
